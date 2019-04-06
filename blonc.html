@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	#blonc {
+		background-color: #666;
+		height: 180px;
+		width: 180px;
+		margin: auto;
+		margin-top: 100px;
+		border-radius: 300;
+	}
+</style>
+<head>
+	<title>Blonc</title>
+</head>
+<body>
+<div id="blonc">
+	<span>blonc</span>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+
+	//var sequence = ['#FF0000', '#FF0000', '#FF0000', '#FFFFFF'];
+	var sequence = [
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#FFFFFF',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#AAFFAA',
+		'#FFFFFF',
+		'#FFFFFF',
+
+		'#FF0000',
+		'#FFAA00',
+		'#AAAA00',
+		'#AAFF00',
+		'#00FF00',
+		'#00FFAA',
+		'#00FFFF',
+		'#00AAFF',
+		'#0000FF',
+		'#AA00FF',
+		'#FF00FF',
+		'#FF00AA'
+	];
+	//var sequence = ['#FF4400', '#333300', '#BBBB00', '#FFBB0000', '#FF9900'];
+	var delay = 180;
+	iterations = sequence.length;
+    
+	var i = 0;
+	function myLoop () {
+	   setTimeout(function () {
+	      $('#blonc').css('background-color', sequence[i])
+	      i++;
+	      if (i == iterations) {
+	      	i = 0
+	      }
+	      myLoop();
+	   }, delay)
+	}
+	myLoop();
+});
+
+</script>
+</body>
+</html>
